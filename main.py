@@ -3,7 +3,7 @@ from fastapi import UploadFile,File,FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 app=FastAPI()
 UPLOAD_DIR="storedmodels"
-ALLOWED_EXTENSIONS={".gltf",".fbx",".blend"}
+ALLOWED_EXTENSIONS={".gltf",".fbx",".glb",".blend"}
 if not os.path.exists(UPLOAD_DIR):
     os.makedirs(UPLOAD_DIR)
 app.add_middleware(
